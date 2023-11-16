@@ -20,28 +20,8 @@
 	<main role="main" class="flex-shrink-0">
 		<div class="container">
 			<h1 class="mt-5"> <a href="../">&#8592; Substrate Utilities</a></h1>
-			<p class="lead">Hopefully this page helps you do something.</p>
 			<h4>Cheat Sheet</h4>
-			<div class="row">
-				<div class="col">
-					<h5>Enum</h5>
-					<code>{ "MyEnum": { "_enum": ["A", "B"] } }</code>
-				</div>
-				<div class="col">
-					<h5>Tuple</h5>
-					<code>{ "MyTuple": "(u64, u64)" }</code>
-				</div>
-				<div class="col">
-					<h5>Vector</h5>
-					<code>{ "MyVec": "Vec&lt;u8>" }</code>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<h5>Advance Example</h5>
-					<code> [ { "MyEnum": { "_enum": ["A", "B", "C"] } }, { "MyPartA": "Vec&lt;(MyEnum, u32)>" }, { "MyType": "(MyPartA, u128)" }, { "MyFinalType": "Vec&lt;MyType>" } ] </code>
-				</div>
-			</div>
+
 			<div class="row">
 				<div class="col">
 					<div class="mb-3">
@@ -49,11 +29,14 @@
 						<div class="form-group">
 							<label for="rawBytes">Raw Bytes</label>
 							<textarea class="form-control" id="rawBytes"
-								rows="3">0x18040008000f00100017002a00</textarea>
+								rows="3">0x6469643a737369643a73776e0000000000000000000000000000000000000000d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d0000000000</textarea>
 							<label for="customTypes">Custom Types</label>
 							<div id="customTypes" style="width: 100%; height: 400px;"></div>
+							<label for="typeKey">Type Key</label>
+							<input type="text" class="form-control col-5" id="typeKey" placeholder="String" value="DidStruct">
 							<label for="output">Output</label>
-							<div id="output"></div>
+							<textarea class="form-control" id="output"
+								rows="3"></textarea>
 						</div>
 					</div>
 				</div>
