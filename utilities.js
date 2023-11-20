@@ -15,7 +15,7 @@ s2h.hex.addEventListener("input", hex2string);
 function string2hex() {
 	try {
 		let length = +(s2h.length.value) + 2;
-		s2h.hex.value = stringToHex(s2h.string.value).padEnd(length, "0").slice(0, length);
+		s2h.hex.value = stringToHex(s2h.string.value.trim()).padEnd(length, "0").slice(0, length);
 	} catch (e) {
 		s2h.hex.value = "Error";
 		console.error(e);
@@ -24,7 +24,7 @@ function string2hex() {
 
 function hex2string() {
 	try {
-		s2h.string.value = hexToString(s2h.hex.value);
+		s2h.string.value = hexToString(s2h.hex.value.replace(/0+$/, '')).trim();
 	} catch (e) {
 		s2h.string.value = "Error";
 		console.error(e);
