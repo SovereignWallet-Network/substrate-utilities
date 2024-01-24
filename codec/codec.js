@@ -150,7 +150,7 @@ function parseCustomType() {
     let result = JSON.stringify(
       createType(registry, typeKey.value, rawBytes.value.trim())
     );
-    output.innerText = result;
+    output.value = result;
     console.log("Parse Result:", result);
   } catch (e) {
     console.error(e);
@@ -159,9 +159,9 @@ function parseCustomType() {
 
 function unparseCustomType() {
   try {
-    console.log(typeKey.value, JSON.parse(output.value))
+    console.log(typeKey.value, output.value)
     let result = createType(registry, typeKey.value, JSON.parse(output.value)).toHex();
-    rawBytes.innerText = result;
+    rawBytes.value = result;
     console.log("Unparse Result:", result);
   } catch (e) {
     console.error(e);
